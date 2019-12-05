@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Noppapeli</title>
+		 <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+		var kerrat = prompt("Kuinka monta kertaa heitetään?");
+		var i = 0;		
+		var noppataulu = [];
+		var summa = 0;
+		var o = 0;
+		while(i <kerrat)
+		{		
+			var numerot = Math.floor((Math.random() * 6)+1);
+			var numerot1 = Math.floor((Math.random() * 6)+1);
+			noppataulu.push(numerot);
+			noppataulu.sort();
+			i++
+				var pienin = Math.min.apply(Math,noppataulu);
+				var suurin = Math.max.apply(Math,noppataulu);
+				document.write("pienin heitto oli: "+ pienin +"<br>");
+				document.write("suurin heitto oli : " + suurin + "<br>");
+				
+			
+		}
+		while(o <kerrat)
+		{		
+			var numerot1 = Math.floor((Math.random() * 6)+1);
+			noppataulu.push(numerot1);
+			noppataulu.sort();
+			o++
+				var pienin = Math.min.apply(Math,noppataulu);
+				var suurin = Math.max.apply(Math,noppataulu);
+				document.write("pienin heitto oli: "+ pienin +"<br>");
+				document.write("suurin heitto oli : " + suurin + "<br>");
+				
+			
+		}
+		for(i = 0; i< noppataulu.length;i++)
+				{ summa+=noppataulu[i]};
+		document.write(noppataulu +" <br> "+ "Noppien yhteysumma " +summa);
+		console.log(noppataulu);
+        </script>
+    </body>
+</html>
